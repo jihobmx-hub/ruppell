@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="RUPPELL BMX 아카데미 반별 모집 현황을 보고 바로 신청하세요. 최소 인원이 모이면 바로 반이 열려요.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="RUPPELL BMX 반 신청">
+<meta property="og:description" content="우리 아이 반, 몇 명 모였는지 보고 바로 신청하세요.">
+<meta property="og:image" content="https://jihobmx-hub.github.io/ruppell/assets/eagle-cloud.jpg">
+<meta name="theme-color" content="#030814">
+<link rel="icon" href="assets/logo.png">
+<title>RUPPELL 반 신청</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira:ital,wdth,wght@1,125,800..900&display=swap">
+<style>
+html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+/* Layout: 회사 소개 PPT와 같은 세계 — 깊은 밤하늘 남색 바탕, 구름 위를 나는 독수리 사진 헤더, 둥근 남색 패널 카드, 하늘색 이탤릭 번호 */
+@font-face{font-family:"A2Z";font-weight:400;font-display:swap;src:url("assets/fonts/A2Z-Regular.otf") format("opentype")}
+@font-face{font-family:"A2Z";font-weight:700;font-display:swap;src:url("assets/fonts/A2Z-Bold.otf") format("opentype")}
+@font-face{font-family:"A2Z";font-weight:900;font-display:swap;src:url("assets/fonts/A2Z-Black.otf") format("opentype")}
+:root{
+  color-scheme:dark;
+  --ink:#030814; --card:#0A1228; --card-2:#0e1833; --line:#2A4A8A; --sky:#A2CAFC; --ice:#D9EBFD; --blue:#1F4FFF;
+  --muted:#8fa6cc; --go:#5fe3a1; --go-soft:rgba(95,227,161,.12); --wait:#A2CAFC; --wait-soft:rgba(162,202,252,.12); --danger:#ff9a8f; --white:#f4f8ff;
+  --f:"A2Z","Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --f-logo:"Saira","A2Z","Arial Black",sans-serif; /* RUPPELL 로고처럼 넓고 굵은 기울임 레이싱 글씨 */
+}
+*{box-sizing:border-box}
+body{background:var(--ink);color:var(--ice);font-family:var(--f);font-size:15px;line-height:1.6}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-weight:400;font-size:.78rem;letter-spacing:.42em;color:var(--sky);margin:0}
+.black{font-weight:900;font-style:italic}
+
+.hero{position:relative;overflow:hidden;background:var(--ink)}
+.hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.hero .cloud{position:absolute;left:0;right:0;bottom:0;width:100%;height:62%;object-fit:cover;object-position:center 40%}
+.hero .fade{position:absolute;inset:0;background:linear-gradient(to bottom,var(--ink) 0%,rgba(3,8,20,.55) 45%,rgba(3,8,20,.15) 70%,var(--ink) 100%)}
+.hero .wrap{position:relative;padding-block:2rem 7.5rem;display:flex;flex-direction:column;gap:1rem}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.topbar img{height:26px;width:auto}
+.hero h1{font-weight:900;font-size:clamp(2rem,6.2vw,3.6rem);line-height:1.12;margin:1.6rem 0 0;color:var(--ice);text-wrap:balance}
+.hero h1 .sky{color:var(--sky)}
+.hero p.lead{margin:0;max-width:44ch;font-size:1.05rem;color:var(--ice)}
+.hero .motto{font-weight:900;font-style:italic;color:var(--sky);font-size:clamp(1.1rem,3vw,1.6rem);margin-top:.6rem}
+
+main{padding-block:1rem 3rem;display:flex;flex-direction:column;gap:3.2rem}
+.sec-head{display:flex;flex-direction:column;gap:.35rem;margin-bottom:1.2rem}
+h2{font-weight:900;font-style:italic;font-size:clamp(1.7rem,4.4vw,2.5rem);line-height:1.1;margin:0;color:var(--ice);text-wrap:balance}
+.sub{color:var(--sky);margin:0}
+.notice{border:2px solid var(--line);background:var(--card);border-radius:14px;padding:.7rem 1rem;color:var(--sky);font-size:.92rem;margin-bottom:1rem}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.card{background:rgba(10,18,40,.92);border:2px solid var(--line);border-radius:22px;padding:12px 12px 18px;display:flex;flex-direction:column;gap:.75rem;min-width:0}
+.thumb{position:relative;height:150px;border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#0b2a8f 0%,var(--blue) 55%,#6aa2ff 100%)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(3,8,20,.75),rgba(3,8,20,.25))}
+.thumb .big{position:absolute;inset:0;z-index:1;display:flex;align-items:center;justify-content:center;font-family:var(--f-logo);font-stretch:125%;font-weight:900;font-style:italic;font-size:2.3rem;letter-spacing:.01em;line-height:1;color:var(--white);text-shadow:0 2px 18px rgba(3,8,20,.5)}
+.thumb .count{position:absolute;z-index:2;right:10px;bottom:10px;background:rgba(3,8,20,.82);border:1.5px solid var(--sky);border-radius:12px;padding:.25rem .65rem;font-weight:900;font-style:italic;font-size:1.7rem;line-height:1.1;color:var(--ice);font-variant-numeric:tabular-nums}
+.thumb .count small{font-size:1rem;color:var(--sky)}
+.head{display:flex;align-items:center;gap:14px;padding:0 6px}
+.head .num{font-weight:900;font-style:italic;font-size:2rem;color:var(--sky);line-height:1}
+.head .en{font-family:var(--f-logo);font-stretch:125%;font-style:italic;font-weight:800;font-size:.95rem;letter-spacing:.02em;line-height:1.25;margin:0;color:var(--ice)}
+.head .ko{font-size:.92rem;color:var(--sky);margin:0}
+.head .pill{margin-left:auto}
+.sep{height:2px;background:var(--line);margin:0 6px}
+.who{color:var(--ice);font-size:.92rem;margin:0;padding:0 6px}
+.pill{display:inline-block;font-size:.76rem;font-weight:700;padding:.2rem .6rem;border-radius:99px;white-space:nowrap}
+.pill.open{background:var(--go-soft);color:var(--go);border:1px solid var(--go)}
+.pill.wait{background:var(--wait-soft);color:var(--sky);border:1px solid var(--line)}
+.seats{display:flex;flex-wrap:wrap;gap:7px;padding:0 6px}
+.seat{width:22px;height:22px;border-radius:50%;border:2px dashed var(--line)}
+.seat.on{border:2px solid var(--sky);background:var(--sky)}
+.need{font-weight:700;margin:0;padding:0 6px;color:var(--ice)}
+.need.open{color:var(--go)}
+.card button{margin:auto 6px 0}
+
+button{font:inherit;font-weight:700;border-radius:12px;border:2px solid var(--blue);background:var(--blue);color:var(--white);padding:.7rem 1.1rem;cursor:pointer;letter-spacing:.02em}
+button.ghost{background:transparent;color:var(--ice);border-color:var(--line)}
+button.ghost:hover{border-color:var(--sky)}
+button:disabled{opacity:.45;cursor:not-allowed}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--sky);outline-offset:2px}
+
+.coachstrip{display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:center;background:var(--card);border:2px solid var(--line);border-radius:22px;padding:14px}
+.coachstrip img{width:150px;height:170px;object-fit:cover;border-radius:14px}
+.coachstrip .name{font-weight:900;font-style:italic;font-size:1.6rem;margin:.1rem 0 .4rem;line-height:1.1}
+.coachstrip ul{margin:0;padding-left:1.1rem;font-size:.92rem;display:grid;grid-template-columns:1fr 1fr;gap:.1rem 1.2rem}
+.spots{display:flex;flex-wrap:wrap;gap:.6rem 1.6rem;align-items:center;margin-top:1rem}
+.spots .s{display:flex;gap:.5rem;align-items:baseline;margin:0}
+.spots b{font-weight:900;font-style:italic;color:var(--sky)}
+.spots .tag{align-self:center;font-family:var(--f-logo);font-stretch:125%;font-style:italic;font-weight:800;font-size:.68rem;letter-spacing:.04em;line-height:1;color:var(--ink);background:var(--sky);border-radius:99px;padding:.3rem .6rem .28rem}
+
+form{background:var(--card);border:2px solid var(--line);border-radius:22px;padding:1.3rem;display:grid;grid-template-columns:1fr 1fr;gap:14px 16px}
+.field{display:flex;flex-direction:column;gap:.35rem;min-width:0}
+.field.full{grid-column:1/-1}
+label{font-weight:700;font-size:.92rem;color:var(--ice)}
+label .opt{font-weight:400;color:var(--muted)}
+input,select,textarea{font:inherit;color:var(--ice);background:var(--ink);border:2px solid var(--line);border-radius:12px;padding:.6rem .75rem;width:100%}
+input::placeholder,textarea::placeholder{color:#5d6f93}
+textarea{min-height:80px;resize:vertical}
+.err{color:var(--danger);font-size:.84rem;min-height:1.1em}
+.consent{grid-column:1/-1;border:2px solid var(--line);border-radius:14px;padding:.85rem 1rem;font-size:.86rem;color:var(--sky);display:flex;flex-direction:column;gap:.5rem}
+.consent ul{margin:0;padding-left:1.1rem;color:var(--ice)}
+.check{display:flex;gap:.55rem;align-items:flex-start;color:var(--ice);font-weight:700}
+.check input{width:20px;height:20px;flex:none;margin-top:2px;accent-color:var(--blue)}
+.actions{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
+.actions button{min-width:180px}
+.toast{grid-column:1/-1;border-radius:14px;padding:.85rem 1rem;font-weight:700}
+.toast.ok{background:var(--go-soft);color:var(--ice);border:2px solid var(--go)}
+.toast.bad{background:rgba(255,154,143,.1);border:2px solid var(--danger)}
+
+.coach{border-top:2px solid var(--line);padding-top:1.6rem}
+.tablebox{overflow-x:auto;border:2px solid var(--line);border-radius:18px;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:780px;font-size:.88rem}
+th,td{text-align:left;padding:.6rem .75rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.74rem;letter-spacing:.12em;color:var(--sky);font-weight:700}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.row-actions{display:flex;gap:.4rem}
+.row-actions button{padding:.3rem .6rem;font-size:.8rem}
+.coachbar{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center;margin-bottom:.9rem}
+footer{color:var(--muted);font-size:.82rem;padding-block:1rem 2.5rem;display:flex;flex-direction:column;gap:.6rem}
+footer img{height:20px;width:auto;opacity:.8;align-self:flex-start}
+@media (max-width:640px){form{grid-template-columns:1fr}.coachstrip{grid-template-columns:96px 1fr}.coachstrip img{width:96px;height:120px}.coachstrip ul{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:no-preference){.seat.on{transition:background .3s}.hero h1,.hero .lead{animation:rise .7s ease-out both}.hero .lead{animation-delay:.12s}@keyframes rise{from{opacity:0;transform:translateY(10px)}}}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img class="bg" src="assets/bg.jpg" alt="">
+  <img class="cloud" src="assets/eagle-cloud.jpg" alt="구름 바다 위를 나는 독수리">
+  <div class="fade"></div>
+  <div class="wrap">
+    <div class="topbar">
+      <img src="assets/logo.png" alt="RUPPELL BMX TEAM">
+      <p class="eyebrow">CLASS REGISTRATION</p>
+    </div>
+    <h1>우리 아이 반,<br><span class="sky">몇 명 모였는지 보고 바로 신청하세요.</span></h1>
+    <p class="lead">반마다 정해 둔 인원이 모이면 바로 수업을 시작해요. 신청해 두시면 반이 열리는 날 가장 먼저 연락드릴게요.</p>
+    <p class="motto">Heading to the top, staying at the top.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section aria-labelledby="classes-h">
+    <div class="sec-head">
+      <p class="eyebrow">OUR CLASSES</p>
+      <h2 id="classes-h">반별 모집 현황</h2>
+      <p class="sub">동그라미 하나가 아이 한 명이에요. 빈 동그라미가 다 차면 반이 열려요.</p>
+    </div>
+    <div id="status" class="notice" hidden></div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section aria-labelledby="coach-intro-h">
+    <div class="sec-head">
+      <p class="eyebrow">WHO IS THE COACH ?</p>
+      <h2 id="coach-intro-h">헤드 코치가 직접 가르쳐요</h2>
+    </div>
+    <div class="coachstrip">
+      <img src="assets/coach.jpg" alt="헤드 코치 이지호">
+      <div>
+        <p class="eyebrow">HEAD COACH</p>
+        <p class="name">JIHO LEE</p>
+        <ul>
+          <li>전문스포츠지도사 2급</li>
+          <li>경희대 스포츠지도학과 출신</li>
+          <li>2018 프리스타일 국가대표</li>
+          <li>2023 하계 청소년 국가대표 코치</li>
+        </ul>
+      </div>
+    </div>
+    <div class="spots">
+      <p class="eyebrow">TRAINING SPOTS</p>
+      <p class="s"><b>01</b>여기산 X게임장</p>
+      <p class="s"><b>02</b>안산 호수공원 스케이트파크</p>
+      <p class="s"><b>03</b>여의롤장<span class="tag">BALANCE BIKE</span></p>
+    </div>
+  </section>
+
+  <section aria-labelledby="form-h" id="apply">
+    <div class="sec-head">
+      <p class="eyebrow">APPLY NOW</p>
+      <h2 id="form-h">신청하기</h2>
+      <p class="sub">1분이면 충분해요. 신청서가 들어오면 감독이 순서대로 전화나 문자를 드려요.</p>
+    </div>
+    <form id="form" novalidate>
+      <div class="field full">
+        <label for="f-class">원하는 반</label>
+        <select id="f-class" required></select>
+        <div class="err" id="e-class"></div>
+      </div>
+      <div class="field">
+        <label for="f-child">아이 이름</label>
+        <input id="f-child" autocomplete="off" maxlength="20" placeholder="예: 김루펠">
+        <div class="err" id="e-child"></div>
+      </div>
+      <div class="field">
+        <label for="f-age">아이 나이 (만 나이)</label>
+        <select id="f-age"></select>
+        <div class="err" id="e-age"></div>
+      </div>
+      <div class="field">
+        <label for="f-parent">보호자 이름</label>
+        <input id="f-parent" autocomplete="name" maxlength="20" placeholder="예: 김보호">
+        <div class="err" id="e-parent"></div>
+      </div>
+      <div class="field">
+        <label for="f-phone">연락받을 휴대폰 번호</label>
+        <input id="f-phone" inputmode="numeric" autocomplete="tel" maxlength="13" placeholder="010-1234-5678">
+        <div class="err" id="e-phone"></div>
+      </div>
+      <div class="field">
+        <label for="f-exp">자전거·BMX 타 본 기간</label>
+        <select id="f-exp">
+          <option value="처음">처음이에요</option>
+          <option value="6개월 미만">6개월 미만</option>
+          <option value="6개월~1년">6개월 ~ 1년</option>
+          <option value="1~3년">1 ~ 3년</option>
+          <option value="3년 이상">3년 이상</option>
+        </select>
+      </div>
+      <div class="hp" aria-hidden="true">
+        <label for="f-website">비워 두세요</label>
+        <input id="f-website" tabindex="-1" autocomplete="off">
+      </div>
+      <div class="field full">
+        <label for="f-memo">감독님께 하고 싶은 말 <span class="opt">(선택)</span></label>
+        <textarea id="f-memo" maxlength="300" placeholder="예: 주말 오전 수업이 좋아요 / 친구 한 명이랑 같이 신청하고 싶어요"></textarea>
+      </div>
+      <div class="consent">
+        <div><b>개인정보 수집·이용 안내</b></div>
+        <ul>
+          <li>받는 정보: 보호자 이름·휴대폰 번호, 아이 이름·나이, 타 본 기간, 남기신 말</li>
+          <li>쓰는 곳: 반이 열릴 때 알려 드리고, 수업 상담을 할 때만 써요</li>
+          <li>보관 기간: 신청을 취소하면 바로 지우고, 취소하지 않아도 1년이 지나면 지워요</li>
+          <li>연락처는 감독만 봐요. 다른 학부모님께는 반마다 몇 명이 신청했는지만 보여요</li>
+          <li>신청을 취소하거나 정보를 지우고 싶으시면 인스타그램 @ruppell_bmx_team으로 DM 주세요</li>
+        </ul>
+        <label class="check"><input type="checkbox" id="f-consent"> 위 내용에 동의합니다. 만 14세 미만인 아이의 정보는 보호자인 제가 적었습니다</label>
+        <div class="err" id="e-consent"></div>
+      </div>
+      <div class="actions">
+        <button type="submit" id="submit">신청하기</button>
+        <span class="sub" id="submit-note"></span>
+      </div>
+      <div id="toast" class="toast" hidden></div>
+    </form>
+  </section>
+</main>
+
+<footer class="wrap">
+  <img src="assets/logo.png" alt="RUPPELL BMX TEAM">
+  <span>RUPPELL BMX ACADEMY · Instagram @ruppell_bmx_team</span>
+</footer>
+
+<script>
+// ▼ 감독님 구글 시트 연결 주소 (Apps Script 웹 앱 배포 주소). 비어 있으면 "준비 중"으로 보여요.
+var API_URL = "";
+
+(function(){
+  // 반 정보: 최소 개설 인원(min), 이미 다니는 학생 수(base). 구글 시트 쪽 Code.gs와 같아야 해요.
+  var CLASSES=[
+    {id:"balance13",name:"밸런스바이크반 1 ~ 3세",en:"BALANCE BIKE · AGE 1-3",big:"BALANCE",who:"페달 없는 자전거로 균형 잡는 법과 안전하게 타는 습관을 익혀요",min:5,base:0,ages:[1,2,3],img:"assets/balance.jpg"},
+    {id:"balance47",name:"밸런스바이크반 4 ~ 7세",en:"BALANCE BIKE · AGE 4-7",big:"BALANCE",who:"친구들과 겨루며 해내는 기쁨을 맛보고, 대회처럼 실제로 달려 봐요",min:3,base:0,ages:[4,5,6,7],img:"assets/balance.jpg"},
+    {id:"beginner",name:"입문·초급반",en:"BEGINNER CLASS",big:"BEGINNER",who:"BMX를 처음 타는 친구들 반이에요. 평일에 연습 영상을 보내면 일주일에 두 번 봐 드려요",min:3,base:0,ages:null},
+    {id:"intermediate",name:"중급반",en:"INTERMEDIATE CLASS",big:"INTER",who:"기본기를 다진 친구들이 기술을 넓혀 가요. 연습 영상은 일주일에 두 번 봐 드려요",min:2,base:0,ages:null},
+    {id:"elite",name:"엘리트반",en:"ELITE CLASS",big:"ELITE",who:"대회를 준비하는 선수 반이에요. 주말에 2시간 30분 훈련하고 평일에는 온라인으로 코칭해요",min:1,base:1,ages:null}
+  ];
+  var byId={}; CLASSES.forEach(function(c){byId[c.id]=c});
+  var serverCounts=null, ready=false;
+  var $=function(id){return document.getElementById(id)};
+
+  var cs=$("f-class");
+  cs.appendChild(new Option("반을 골라 주세요",""));
+  CLASSES.forEach(function(c){cs.appendChild(new Option(c.name,c.id))});
+  var as=$("f-age");
+  as.appendChild(new Option("나이를 골라 주세요",""));
+  for(var a=1;a<=19;a++) as.appendChild(new Option("만 "+a+"세",String(a)));
+  as.appendChild(new Option("20세 이상","20"));
+
+  function counts(){
+    var m={}; CLASSES.forEach(function(c){ m[c.id]= serverCounts && typeof serverCounts[c.id]==="number" ? serverCounts[c.id] : c.base });
+    return m;
+  }
+  function el(tag,cls,text){var e=document.createElement(tag); if(cls) e.className=cls; if(text!=null) e.textContent=text; return e}
+
+  function render(){
+    var m=counts(), grid=$("grid"); grid.textContent="";
+    CLASSES.forEach(function(c,idx){
+      var n=m[c.id], open=n>=c.min, need=Math.max(0,c.min-n);
+      var card=el("article","card");
+      var thumb=el("div","thumb");
+      if(c.img){ var im=el("img"); im.src=c.img; im.alt=""; im.loading="lazy"; thumb.appendChild(im); thumb.classList.add("photo") }
+      thumb.appendChild(el("div","big",c.big));
+      var num=el("div","count"); num.appendChild(document.createTextNode(String(n)));
+      num.appendChild(el("small",null," / "+c.min));
+      num.setAttribute("aria-label","신청 "+n+"명, 최소 "+c.min+"명");
+      thumb.appendChild(num);
+      card.appendChild(thumb);
+      var head=el("div","head");
+      head.appendChild(el("p","num","0"+(idx+1)));
+      var tx=el("div"); tx.appendChild(el("p","en",c.en)); tx.appendChild(el("h3","ko",c.name)); head.appendChild(tx);
+      head.appendChild(el("span","pill "+(open?"open":"wait"), open?(c.base&&n===c.base?"운영 중":"개설 확정"):"모집 중"));
+      card.appendChild(head);
+      card.appendChild(el("div","sep"));
+      card.appendChild(el("p","who",c.who));
+      var dots=el("div","seats"); var total=Math.max(c.min,n);
+      for(var i=0;i<total;i++) dots.appendChild(el("span","seat"+(i<n?" on":"")));
+      dots.setAttribute("aria-hidden","true");
+      card.appendChild(dots);
+      card.appendChild(el("p","need"+(open?" open":""), open ? (c.base&&n===c.base?"지금 수업하고 있어요. 바로 함께할 수 있어요":"인원이 다 찼어요. 곧 첫 수업 날짜를 알려 드릴게요") : need+"명만 더 모이면 열려요"));
+      var b=el("button","ghost","이 반 신청하기"); b.type="button";
+      b.addEventListener("click",function(){cs.value=c.id; $("apply").scrollIntoView({behavior:"smooth"}); setTimeout(function(){$("f-child").focus()},350)});
+      card.appendChild(b);
+      grid.appendChild(card);
+    });
+  }
+
+  $("f-phone").addEventListener("input",function(e){
+    var d=e.target.value.replace(/\D/g,"").slice(0,11);
+    e.target.value=d.length<4?d:d.length<8?d.slice(0,3)+"-"+d.slice(3):d.slice(0,3)+"-"+d.slice(3,d.length-4)+"-"+d.slice(-4);
+  });
+
+  function setErr(k,msg){$("e-"+k).textContent=msg||""}
+  function validate(){
+    var ok=true, v={
+      classId:cs.value, childName:$("f-child").value.trim(), childAge:Number(as.value),
+      parentName:$("f-parent").value.trim(), phone:$("f-phone").value.trim(),
+      experience:$("f-exp").value, memo:$("f-memo").value.trim(), consent:$("f-consent").checked,
+      website:$("f-website").value
+    };
+    ["class","child","age","parent","phone","consent"].forEach(function(k){setErr(k,"")});
+    if(!v.classId){setErr("class","원하는 반을 골라 주세요");ok=false}
+    if(v.childName.length<2){setErr("child","아이 이름을 2글자 이상 적어 주세요");ok=false}
+    if(!as.value){setErr("age","아이 나이를 골라 주세요");ok=false}
+    else if(v.classId && byId[v.classId].ages && byId[v.classId].ages.indexOf(v.childAge)<0){setErr("age","이 반은 만 "+byId[v.classId].ages[0]+" ~ "+byId[v.classId].ages.slice(-1)[0]+"세 아이들이 다니는 반이에요");ok=false}
+    if(v.parentName.length<2){setErr("parent","보호자 이름을 2글자 이상 적어 주세요");ok=false}
+    if(!/^01[016789]-\d{3,4}-\d{4}$/.test(v.phone)){setErr("phone","휴대폰 번호를 010-1234-5678처럼 적어 주세요");ok=false}
+    if(!v.consent){setErr("consent","동의해 주셔야 신청이 돼요");ok=false}
+    return ok?v:null;
+  }
+  function toast(kind,msg){var t=$("toast"); t.className="toast "+kind; t.textContent=msg; t.hidden=false; t.scrollIntoView({block:"nearest",behavior:"smooth"})}
+  function status(msg){var s=$("status"); if(!msg){s.hidden=true;return} s.textContent=msg; s.hidden=false}
+
+  $("form").addEventListener("submit",function(e){
+    e.preventDefault();
+    $("toast").hidden=true;
+    var v=validate(); if(!v){ var first=document.querySelector(".err:not(:empty)"); if(first) first.scrollIntoView({block:"center"}); return }
+    if(!API_URL){ toast("bad","신청 접수를 준비하고 있어요. 조금만 기다려 주세요. 급하시면 인스타그램 @ruppell_bmx_team으로 DM 주세요."); return }
+    var btn=$("submit"); btn.disabled=true; btn.textContent="보내는 중…";
+    // text/plain으로 보내야 구글 쪽에서 막히지 않아요
+    fetch(API_URL,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(v)})
+      .then(function(r){return r.json()})
+      .then(function(res){
+        if(res && res.counts){ serverCounts=res.counts; render() }
+        if(res && res.ok){
+          var c=byId[v.classId], n=counts()[v.classId];
+          toast("ok", n>=c.min ? "신청됐어요! 이 반은 인원이 다 찼어요. 감독이 곧 첫 수업 날짜를 알려 드릴게요." : "신청됐어요! 이 반은 "+Math.max(0,c.min-n)+"명만 더 모이면 열려요. 열리는 대로 바로 연락드릴게요.");
+          $("form").reset();
+        } else if(res && res.error==="duplicate"){
+          toast("bad","같은 번호로 이 반에 이미 신청돼 있어요. 바꿀 내용이 있으면 인스타그램 DM으로 알려 주세요.");
+        } else {
+          toast("bad","신청 내용을 다시 확인해 주세요. 계속 안 되면 인스타그램 @ruppell_bmx_team으로 DM 주세요.");
+        }
+      })
+      .catch(function(){ toast("bad","신청을 보내지 못했어요. 인터넷 연결을 확인하고 다시 눌러 주세요.") })
+      .then(function(){ btn.disabled=false; btn.textContent="신청하기" });
+  });
+
+  render();
+  if(!API_URL){ status("신청 접수 준비 중이에요. 곧 이 페이지에서 바로 신청하실 수 있어요."); return }
+  var timer=setTimeout(function(){ status("모집 현황을 불러오는 중이에요. 잠시만 기다려 주세요.") },4000);
+  fetch(API_URL).then(function(r){return r.json()}).then(function(res){
+    clearTimeout(timer); status("");
+    if(res && res.counts){ serverCounts=res.counts; render() }
+  }).catch(function(){ clearTimeout(timer); status("모집 현황을 불러오지 못했어요. 신청은 그대로 하실 수 있어요.") });
+})();
+</script>
+</body>
+</html>
