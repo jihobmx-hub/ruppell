@@ -5,6 +5,10 @@
 - 비즈니스 도메인: 자전거(BMX) 교육 아카데미 — 실제 운영 중인 BMX 아카데미 'RUPPELL'
 - MVP 주제: {MVP 주제 정의 단계에서 정의}
 
+## 참고 자료 (기획 시 먼저 읽을 것)
+- `docs/instagram-조사.md`: 인스타그램 @ruppell_bmx_team 조사 (2026-11-27)
+- `docs/회사소개-ppt-요약.md`: 회사 소개 PPT 요약 (수업 구성, 비용, 코치 경력)
+
 ## 팀 행동원칙
 - 'M'사상을 믿고 실천한다. : Value-Oriented, Interactive, Iterative
 - 'M'사상 실천을 위한 마인드셋을 가진다
